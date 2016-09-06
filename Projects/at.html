@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Aaron Pulver - GIS Analyst & Software Developer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="page-scroll">
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <!--<li class="page-scroll">
+                        <a href="#page-top">Top</a>
+                    </li>-->
+                    <li>
+                        <a class="page-scroll" href="#introduction">Intro</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#methodology">Methods & Discussion</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#results">Results</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <section id="introduction" class="content-section text-center">
+        <div class="section-default gray-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Appalachian Trail Land Cover Change Analysis & Mapbook</h2>
+                    <h3><a href="at/paper.pdf">PDF</a></h3>
+                    <p>
+                    The Appalachian Trail (AT) is one of the most popular hiking trails in the Eastern United States. It consists of over 2100 miles and goes through 14 different states as it makes its way from Springer Mountain, GA to Mount Katahdin in Maine. The land-use-land-cover (LULC) for the Appalachian Trail (AT) was analyzed to see how much of the different vegetation types exist along the trail. LULC data from 1992 was compared to LULC data from 2006 to see if there were any significant changes. A map book was also developed which shows sections of the trail and key attributes along the way.
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="methodology" class="content-section text-center">
+        <div class="section-default black-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Methodology & Discussion</h2>
+                    <p>
+                    The 1992 and 2006 LULC data was downloaded from mrlc.gov, the Multi-Resolution Land Characteristics Consortium (MRLC). The Appalachian Trail data was downloaded from the Appalachian Trail Conservancy. It includes a shapefile of the whole trail, a shapefile of parking areas on and around the trail, trail shelters, parks, and states which the trail goes through. First, the LULC data for both years was clipped to the size of the trail shapefile. This reduces the size and allows quicker rendering. Then the trail shapefile was converted to a raster with 30x30 resolution. Next, the raster trail data was overlaid onto the LULC data to extract the sections which intersect with the trail. There were six different classes that were chosen to be analyzed: water, developed land, barren land, forest/shrub, farmland, and wetlands. These were derived from the LULC data sets as described in the table below by adding six fields and by selecting the desired land covers and assigning those to the desired field. For example, 91 and 92 were selected and the newly classified field was set to be 6, wetlands. The results are described in the table below where the developed land increased by three percent in those fourteen years. This also shows how the amount of water, barren land, forests, and farmlands decreased over time. The AT is 2186 miles long and based on the percentages developed, the approximate miles of the terrain was found. The developed land increased by 68 miles over those 14 years. Due to environmental changes such as hurricanes and human development, the trail is often re-routed. Groups often work to increase the amount of trail on state and federal land as well. However, I was only able to find the most recent trail (2013) so a fair comparison of both trails could not be performed. The map below shows the Appalachian Trail and the different types of land that it traverses.
+                    <p>
+                    Once the basic analysis was complete a map-book was developed which goes page by page using data-driven pages to display an overview map as well as a detailed map. First a new data layer frame was added and named “Detailed Map.” This frame consists of background imagery, the AT shapefile, the AT parking lots, states, and a few other layers. The next step was to create a grid index based on the AT shapefile. This creates a new layer which as 400 square mile sections along the trail. The next step was to calculate adjacent fields using the newly created grid index. Data driven pages was enabled by using the toolbar. The detail map was selected as the data frame and the layer was the grid index. This step links the sections in the grid together.
+                    <p>
+                    Next a locator map was created. This was done by creating a new data frame and copying the base layers from the detail map. Then a new layer was created by exporting the grid index to become a mask. This layer was then copied and named to be current page. This layer was edited and a page definition query was used match the page name field. The locator mask was edited to enable a page definition to “Don’t Match” the page name. This process creates the highlighting of the current page. Dynamic data labels were added to show the page number, scale bar, and titles. Finally, the labels were edited to display the name of the shelters, the parks, and the states. The label toolbar was used to weight the labels. This was very important so that labels did not overlap with the various points on the map such as the shelters. Once the map was created with the desired labels, it was exported to a PDF. The PDF allows different vector layers to be turned on and off as well as the labels. Finally, a title page and two pages with data were inserted to the front of the map book by running a simple Python script. This map book was successfully designed to be used a simple guide for the Appalachian Trail.
+                    <p>
+                    I had planned to include elevation data and to use the network analyst tool to find see how long it would take to hike each state. However, the elevation data required to do this analysis was just too large and took too long to download. I also was hoping to find a shapefile or gpx file of the AT from 1992, but obtaining GPS coordinates at that time for such a long trail was very unlikely as the technology was not readily available to consumers. This would have given a more accurate comparison of the two time periods. 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="results" class="content-section">
+        <div class="section-default gray-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <table class="tableizer-table">
+                        <thead><tr class="tableizer-firstrow"><th>Classification</th><th>2006 (%)</th><th>1992 (%)</th><th>2006 (Miles)</th><th>1992 (Miles)</th></tr></thead><tbody>
+                         <tr><td>Water</td><td>0.39</td><td>0.58</td><td>8.49</td><td>12.58</td></tr>
+                         <tr><td>Developed</td><td>3.88</td><td>0.77</td><td>84.72</td><td>16.80</td></tr>
+                         <tr><td>Barren </td><td>0.65</td><td>0.82</td><td>14.26</td><td>18.00</td></tr>
+                         <tr><td>Forest/Shrub</td><td>92.89</td><td>95.03</td><td>2030.48</td><td>2077.29</td></tr>
+                         <tr><td>Farmland</td><td>1.50</td><td>2.10</td><td>32.78</td><td>46.00</td></tr>
+                         <tr><td>Wetlands</td><td>0.70</td><td>0.70</td><td>15.27</td><td>15.34</td></tr>
+                    </tbody></table>
+                    <p>
+                    <table class="tableizer-table">
+                        <thead><tr class="tableizer-firstrow"><th>Value</th><th>Name</th><th>Classification</th></tr></thead><tbody>
+                         <tr><td>11</td><td>Open Water</td><td>Water</td></tr>
+                         <tr><td>21</td><td>Developed, Open Space</td><td>Developed</td></tr>
+                         <tr><td>22</td><td>Developed, Low Intensity</td><td>Developed</td></tr>
+                         <tr><td>23</td><td>Developed, Medium Intensity</td><td>Developed</td></tr>
+                         <tr><td>24</td><td>Developed, High Intensity</td><td>Developed</td></tr>
+                         <tr><td>31</td><td>Barren Land</td><td>Barren</td></tr>
+                         <tr><td>32</td><td>Quarries</td><td>Barren</td></tr>
+                         <tr><td>33</td><td>Transitional</td><td>Barren</td></tr>
+                         <tr><td>41</td><td>Deciduous Forest</td><td>Forest/Shrub</td></tr>
+                         <tr><td>42</td><td>Evergreen Forest</td><td>Forest/Shrub</td></tr>
+                         <tr><td>43</td><td>Mixed Forest</td><td>Forest/Shrub</td></tr>
+                         <tr><td>51</td><td>Shrubland</td><td>Forest/Shrub</td></tr>
+                         <tr><td>81</td><td>Pasture/Hay</td><td>Farmland</td></tr>
+                         <tr><td>82</td><td>Row Crops</td><td>Farmland</td></tr>
+                         <tr><td>85</td><td>Urban Grasses</td><td>Farmland</td></tr>
+                         <tr><td>91</td><td>Woody Wetlands</td><td>Wetlands</td></tr>
+                         <tr><td>92</td><td>Emergent Herbaceous Wetlands</td><td>Wetlands</td></tr>
+                    </tbody></table>
+                    <p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <img src="at/LULC_2006.jpg"/>
+                    <img src="at/mapbook_sample.JPG"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Aaron Pulver 2016</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/grayscale.js"></script>
+
+</body>
+
+</html>
