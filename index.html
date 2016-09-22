@@ -27,7 +27,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-custom-main navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -40,7 +40,7 @@
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="page-scroll">
-                        <a href="#page-top">Home</a>
+                        <a  class="page-scroll" href="#page-top">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -75,12 +75,19 @@
         </div>
     </header>
 
-    <section id="about" class="container content-section text-center">
-        <div class="section-default black-section">
+    <section id="about" class="content-section text-center">
+        <div class="section-default">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-md-12">
                         <h2>About Me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-1">
+                    <img src="img/profile.jpg"/>
+                    </div>
+                    <div class="col-md-6">
                         <p> I was born and raised in the beautiful Finger Lakes Region of Western New York. 
                         Growing up I spent a lot of time hiking, camping, skiing, biking, and kayaking with my family. 
                         I took a special interest in hiking, and in true peak bagger fashion became an Adirondack 46-er, 
@@ -100,7 +107,7 @@
     </section>
 
     <section id="projects" class="content-section text-center">
-        <div class="section-default gray-section">
+        <div class="section-default">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -108,96 +115,220 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <a href="Projects/spatialtweets.html"><h3>Spatial Analysis of Tweets</h3></a>
-                        <p>I developed a Python script that ran on a RaspberryPi for several weeks collecting geo-referenced tweets
-                        that had terms relating to "ISIS". Results were stored a MySQL database. The tweets were then extracted from the database and 
-                        analyzed using ArcGIS and Excel to find spatial and temporal patterns and statistics. </p>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="https://github.com/apulverizer/pyspatialopt"><h4 class="project-title">PySpatialOpt</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Projects/pyspatialopt/mclp_example.JPG"/>
+                            </div>
+                            <div class="col-md-6">
+                                <p>In conjunction with my thesis research, I am developing an open source python library for spatial optimization modeling. Be sure to check out the <a href="https://github.com/apulverizer/pyspatialopt/wiki">wiki pages</a> for more information.
+                                This library can be used to generate and solve spatial optimization models (in the form of .lp or .mps files) from spatial data. 
+                                It has bindings for arcpy and pyqgis to generate the coverage configurations which are then used to generate and solve various optimization models using <a href="http://www.coin-or.org/PuLP/">PuLP</a>.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <a href="Projects/at.html"><h3>Appalachian Trail Mapbook</h3></a>
-                        <p>The land-use-land-cover (LULC) for the Appalachian Trail (AT) was analyzed to see how much of the different vegetation 
-                        types exist along the trail. LULC data from 1992 was compared to LULC data from 2006 to see if there were any significant 
-                        changes. A map book was also developed which shows sections of the trail and key attributes along the way.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://github.com/apulverizer/TweetMapping"><h3>Live Webmap of Tweets</h3></a>
-                        <p>I developed a Python script using the Flask micoframework to fetch geo-referenced tweets based on a specific tag. The 
-                        tweets are pushed to leaflet webmap in near real-time via websockets. You can find the code <a href="https://github.com/apulverizer/TweetMapping">
-                        here.</a> Note: the Twitter API has since changed and this may not work.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="https://github.com/apulverizer/ScriptEx"><h3>ScriptEx</h3></a>
-                        <p><a href="https://github.com/apulverizer/ScriptEx">ScriptEx</a> is designed to execute python files and log the output to a file. It accepts single python files, zip files, 
-                        or directory paths as commandline parameters. It uses JSON config files to store a series of configurations to run the 
-                        files with. This includes interactive inputs as well as commandline arguments. It's provided as is. Only tested on Windows. 
-                        I wrote this to run a batch of student homework assignments at once rather than having to manually test each one.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="Projects/lowaltitude.html"><h3>Locating Low-Altitude Obstacles for Drone Navigation using Lidar</h3></a>
-                        <p>My main thesis research involves locating Medical Drones to reduce EMS response times. I was interested in determining the impact
-                        that obstacles at low altitudes (buildings & trees) have on drone flight times and range. Morphological image processing was 
-                        used in conjunction with ArcGIS to extract buildings and trees from Lidar data.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="Projects/windrose.html"><h3>Windroses with D3.js</h3></a>
-                        <p>The D3.js library was used to create an interactive windrose and an pollutionrose.</p>
+                
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="Projects/spatialtweets.html"><h4 class="project-title">Spatial Analysis of Tweets</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-push-6">
+                                <img src="Projects/spatialtweets/geotagged.jpg">
+                            </div>
+                            <div class="col-md-6 col-md-pull-6">
+                                <p>I developed a Python script that ran on a RaspberryPi for several weeks collecting geo-referenced tweets
+                                that had terms relating to "ISIS". Results were stored a MySQL database. The tweets were then extracted from the database and 
+                                analyzed using ArcGIS and Excel to find spatial and temporal patterns and statistics. </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="row">
-                    <div class="col-md-4">
-                        <a href="https://github.com/apulverizer/ChristmasLights"><h3>Raspberry Pi Controlled Christmas Lights</h3></a>
-                        <p>I developed a <a href="https://github.com/apulverizer/ChristmasLights">python application </a> using Flask and the RaspberryPi to control a box
-                        of 8 outlets which are connected to strands of Christmas lights. The lights can 
-                        be "synced" to music using <a href="https://bitbucket.org/togiles/lightshowpi/wiki/Home">lightshowPi</a>
-                        The lights can also be turned on or off using a simple secured web interface.</p>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="https://github.com/apulverizer/TweetMapping"><h4 class="project-title">Live Webmap of Tweets</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Projects/spatialtweets/leaflet_map_markers.png">
+                            </div>
+                            <div class="col-md-6">
+                                <p>I developed a Python script using the Flask micoframework to fetch geo-referenced tweets based on a specific tag. The 
+                                tweets are pushed to leaflet webmap in near real-time via websockets. You can find the code <a href="https://github.com/apulverizer/TweetMapping">
+                                here.</a> Note: the Twitter API has since changed and this may not work.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <a href="https://github.com/apulverizer/Kinect-Recording"><h3>Kinect Recording & Gesture Recognition</h3></a>
-                        <p>As part of my teams senior design project, I implemented a simple C++ application 
-                        to record skeletons. <a href="https://github.com/apulverizer/Kinect-Recording">KinectRecording</a> is a package of programs which can be used to record 
-                        and recognize hand/upperbody gestures from a Kinect. It relies on the OpenNI SDK to interface with the original Microsoft Kinect.</p>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="Projects/at.html"><h4 class="project-title">Scriptex</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-push-6">
+                                <img src="Projects/scriptex/scriptex_screen_cap.JPG">
+                            </div>
+                            <div class="col-md-6 col-md-pull-6">
+                                <p><a href="https://github.com/apulverizer/ScriptEx">ScriptEx</a> is designed to execute python files and log the output to a file. It accepts single python files, zip files, 
+                                or directory paths as commandline parameters. It uses JSON config files to store a series of configurations to run the 
+                                files with. This includes interactive inputs as well as commandline arguments.
+                                I wrote this to run a batch of student homework assignments at once rather than having to manually test each one.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <a href="Projects/eeg.html"><h3>EEG Volume Control</h3></a>
-                        <p>This was a team project to use EEG (brain signals) to control the volume of a computer. The BioRadio was used in conjuction with MATLAB
-                        to record EEG signals while a person listened to loud and quiet music. Support Vector Machines and Radial Basis Function Networks were 
-                        used to classify the EEG signals. Unfortunatly, we were unable to get real-time classification working. The Github Repo is available 
-                        <a href="https://github.com/apulverizer/EEG-Volume-Control">here.</a></p>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="Projects/lowaltitude.html"><h4 class="project-title">Locating Low-Altitude Obstacles</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Projects/lowaltitude/buildings2.jpg">
+                            </div>
+                            <div class="col-md-6">
+                                <p>My main thesis research involves locating Medical Drones to reduce EMS response times. I was interested in determining the impact
+                                that obstacles at low altitudes (buildings & trees) have on drone flight times and range. Morphological image processing was 
+                                used in conjunction with ArcGIS to extract buildings and trees from Lidar data.</p>
+                            </div>
+                        </div>
                     </div>
-                <div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="Projects/windrose.html"><h4 class="project-title">Windroses with D3.js</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-push-6">
+                                <img src="Projects/windrose/screen_cap.JPG">
+                            </div>
+                            <div class="col-md-6 col-md-pull-6">
+                                <p>The D3.js library was used to create an interactive windrose and an pollutionrose.</p> </div>
+                        </div>
+                    </div>
+                </div>
+                     
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="https://github.com/apulverizer/ChristmasLights"><h4 class="project-title">Auto - Christmas Lights</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <video controls muted>
+                                        <source src="Projects/christmas_lights/video.mp4" type="video/mp4"/>
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p>I developed a <a href="https://github.com/apulverizer/ChristmasLights">python application </a> using Flask and the RaspberryPi to control a box
+                                of 8 outlets which are connected to strands of Christmas lights. The lights can 
+                                be "synced" to music using <a href="https://bitbucket.org/togiles/lightshowpi/wiki/Home">lightshowPi</a>
+                                The lights can also be turned on or off using a simple secured web interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="https://github.com/apulverizer/Kinect-Recording"><h4 class="project-title">Kinect Gesture Recording</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-push-6">
+                                <img src="Projects/kinect/kinect.JPG"/>
+                            </div>
+                            <div class="col-md-6 col-md-pull-6">
+                                <p>As part of my teams <a href="http://edge.rit.edu/edge/C13103/public/index.html">senior design project</a>, I implemented a simple C++ application 
+                                to record skeletons. <a href="https://github.com/apulverizer/Kinect-Recording">KinectRecording</a> is a package of programs which can be used to record 
+                                and recognize hand/upperbody gestures from a Kinect. It relies on the OpenNI SDK to interface with the original Microsoft Kinect.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="Projects/eeg.html"><h4 class="project-title">EEG Volume Control</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="Projects/eeg/system.jpg"/>
+                            </div>
+                            <div class="col-md-6">
+                                <p>This was a team project to use EEG (brain signals) to control the volume of a computer. The BioRadio was used in conjuction with MATLAB
+                                to record EEG signals while a person listened to loud and quiet music. Support Vector Machines and Radial Basis Function Networks were 
+                                used to classify the EEG signals. Unfortunately, we were unable to get real-time classification working. The Github Repo is available 
+                                <a href="https://github.com/apulverizer/EEG-Volume-Control">here.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <a href="Projects/at.html"><h4 class="project-title">Appalachian Trail Mapbook</h4></a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-push-6">
+                                <img src="Projects/at/mapbook_sample.JPG"/>
+                            </div>
+                            <div class="col-md-6 col-md-pull-6">
+                                <p>The land-use-land-cover (LULC) for the Appalachian Trail (AT) was analyzed to see how much of the different vegetation
+                                types exist along the trail. LULC data from 1992 was compared to LULC data from 2006 to see if there were any significant 
+                                changes. A map book was also developed which shows sections of the trail and key attributes along the way.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
     
     <section id="research" class="content-section text-center">
-        <div class="section-default black-section">
+        <div class="section-default">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>My Research</h2>
-                    <p>
-                    Out-of-hospital cardiac arrest (OOHCA) is prevalent in the United States. Each year several hundred-thousand people die due to cardiac arrest. 
-                    The automated external defibrillator (AED) has greatly enhanced survival rates for OOHCA. However, one of the most important factors in successful 
-                    resuscitation is emergency medical services (EMS) response time. Unmanned aerial vehicles have routinely been used for remote sensing but there are 
-                    new opportunities to use drones for medical emergencies. The objective of my research is examine spatial variation in cardiac arrest incidence rates 
-                    in Salt Lake County and to provide a framework for locating a network of AED enabled drones to significantly reduce response times and therefore 
-                    increase survival rates for OOHCAs. I've worked with my advisor to develop a new location model to determine the most cost-effective way to cover 90% of the demand for 
-                    cardiac arrest medical service within one minute and five minute standards. The demand for service was derived from empirical OOHCA incident 
-                    data. <p>
-                    I heavily use GIS and Python to determine the demand and potential facilities. Once the demand and potential areas are determined, we can apply models
-                    such as <a href="https://en.wikipedia.org/wiki/Maximum_coverage_problem">MCLP</a> and <a href="https://en.wikipedia.org/wiki/Set_cover_problem">LSCP</a> to 
-                    determine the optimal configuration of drones. The models are then solved using Gurobi, a mathmatical programming solver. Results can then 
-                    be mapped and analyzed. In the process of my thesis, I've been developing <a href="https://github.com/apulverizer/pyspatialopt">pyspatialopt</a>, an python library for spatial optimization.
-                    
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>My Research</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>Out-of-hospital cardiac arrest (OOHCA) is prevalent in the United States. Each year several hundred-thousand people die due to cardiac arrest. 
+                        The automated external defibrillator (AED) has greatly enhanced survival rates for OOHCA. However, one of the most important factors in successful 
+                        resuscitation is emergency medical services (EMS) response time. Unmanned aerial vehicles have routinely been used for remote sensing but there are 
+                        new opportunities to use drones for medical emergencies. The objective of my research is examine spatial variation in cardiac arrest incidence rates 
+                        in Salt Lake County and to provide a framework for locating a network of AED enabled drones to significantly reduce response times and therefore 
+                        increase survival rates for OOHCAs. I've worked with my advisor to develop a new location model to determine the most cost-effective way to cover 90% of the demand for 
+                        cardiac arrest medical service within one minute and five minute standards. The demand for service was derived from empirical OOHCA incident 
+                        data. </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/thesis2.jpg"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-push-4">
+                        <p>I heavily use GIS and Python to determine the demand and potential facilities. Once the demand and potential areas are determined, we can apply models
+                        such as <a href="https://en.wikipedia.org/wiki/Maximum_coverage_problem">MCLP</a> and <a href="https://en.wikipedia.org/wiki/Set_cover_problem">LSCP</a> to 
+                        determine the optimal configuration of drones. The models are then solved using Gurobi, a mathmatical programming solver. Results can then 
+                        be mapped and analyzed. In the process of my thesis, I've been developing <a href="https://github.com/apulverizer/pyspatialopt">pyspatialopt</a>, an python library for spatial optimization.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-md-pull-8">
+                        <img src="img/thesis1.png"/>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <section id="publications" class="content-section text-center">
-        <div class="section-default gray-section">
+        <div class="section-default">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Papers & Presentations</h2>
@@ -210,7 +341,7 @@
     </section>
 
     <section id="contact" class="content-section text-center">
-        <div class="section-default black-section">
+        <div class="section-default">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2" style="text-align:center">
                     <h2>Contact Aaron</h2>
