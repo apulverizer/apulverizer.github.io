@@ -29,6 +29,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Custom chart styling -->
+    <link href="../css/charts.css" rel="stylesheet">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -152,25 +160,52 @@
                     <h2>Results</h2>
                     <p>
                     Over 2 million tweets were collected over the course of the collection period. Of these, only 11,156 tweets had geographic coordinates. The first step was to group and label the tweets. There were a total of 36 different languages used. The most popular languages were English, Indonesian, Spanish, Italian, Portuguese, and French. This was not surprising other than Indonesian being the second most popular. A map showing the most popular language per country is shown below. 
-                    A kernel density map was generated from the raw tweet location dataset. 
-                    <p>
-                    The primary areas of twitter activity are in the New York metro area, Southern California, Texas, London, and Jakarta. These are highly populated areas which have easy access to the internet. 
-                    <p>
-                    There were 63 different applications used to submit tweets. The most popular were the official Twitter apps for Android and iOS. This was not surprising as these are the two most used mobile operating systems.
-                    <p>
-                    One of the figures below shows the number of tweets per hour of the day. All times are shown in Eastern Standard Time (EST). There is a clear trend toward more tweets in the morning and then later at night. 
-                    <p>
-                    One of the figures below shows the number of tweets per day. There is one day with very few tweets: March 23rd. This is due to the power going out and stopping data collection. The average number of tweets per day, excluding March 23rd, was 692. The median number of tweets was 617. There are three peaks: March 26th, March 27th, and April 1st. I investigated the March 26th and 27th peaks to see what caused this increase of tweets to 1197 and 1181 respectively.
+                    A kernel density map was generated from the raw tweet location dataset.
+                    <p>The primary areas of twitter activity are in the New York metro area, Southern California, Texas, London, and Jakarta. These are highly populated areas which have easy access to the internet.
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
-                    <img src="spatialtweets/languages.jpg"/>
-                    <img src="spatialtweets/devices.jpg"/>
-                    <img src="spatialtweets/timing.jpg"/>
-                    <img src="spatialtweets/dates.jpg"/>
-                    <img src="spatialtweets/geotagged.jpg"/>
-                    <img src="spatialtweets/kd.jpg"/>
-                    <img src="spatialtweets/languages_map.jpg"/>
+                    <div id="tweetMap" style="height:500px;width:100%;">
+                    </div>
                 </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="caption">Map showing tweets containing references to ISIS</div>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <svg id="languages-chart" width="100%">
+                    </svg>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="caption">Percent of tweets by language</div>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                   <p>There were 63 different applications used to submit tweets. The most popular were the official Twitter apps for Android and iOS. This was not surprising as these are the two most used mobile operating systems.
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <svg id="devices-chart" width="100%"></svg>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="caption">Percent of tweets by source/device</div>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>One of the figures below shows the number of tweets per hour of the day. All times are shown in Eastern Standard Time (EST). There is a clear trend toward more tweets in the morning and then later at night.
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <svg id="times-chart" width="100%"></svg>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="caption">Percent of tweets by time (EST)</div>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>The figure below shows the number of tweets per day. There is one day with very few tweets: March 23rd. This is due to the power going out and stopping data collection. The average number of tweets per day, excluding March 23rd, was 692. The median number of tweets was 617. There are three peaks: March 26th, March 27th, and April 1st. I investigated the March 26th and 27th peaks to see what caused this increase of tweets to 1197 and 1181 respectively.
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <svg id="dates-chart" width="100%"></svg>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="caption">Percent of tweets by Date (UTC)</div>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -241,9 +276,84 @@
     <!-- Plugin JavaScript -->
     <script src="../js/jquery.easing.min.js"></script>
 
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <!-- Leaflet Heatmap -->
+    <script src="../js/leaflet-heat.js"></script>
+
     <!-- Custom Theme JavaScript -->
     <script src="../js/grayscale.js"></script>
 
-</body>
+    <script src="../js/charts.js"></script>
 
+    <div id="tooltip"></div>
+</body>
 </html>
+<script>
+    renderBarChart("#languages-chart", "#tooltip","../data/tweet_languages.csv", "language","frequency");
+    renderBarChart("#devices-chart", "#tooltip","../data/tweet_sources.csv", "source","frequency");
+    renderBarChart("#times-chart", "#tooltip","../data/tweet_times.csv", "time","frequency");
+    renderBarChart("#dates-chart", "#tooltip","../data/tweet_dates.csv", "date","frequency");
+</script>
+<script>
+    // Bind a popup to the name of each location
+    function onEachFeature(feature, layer) {
+        if (feature.properties && feature.properties.text_) {
+            var popup = "<b>Text:</b> " + feature.properties.text_;
+            layer.bindPopup(popup);
+        }
+    }
+    function onEachFeatureLang(feature, layer) {
+        if (feature.properties && feature.properties.NAME) {
+            var popup = "<b>"+feature.properties.NAME + "</b>";
+            if (feature.properties.lang){
+                popup += ": " + feature.properties.lang;
+            }
+            layer.bindPopup(popup);
+        }
+    }
+    var CustomIcon = L.Icon.extend({
+        options: {
+            iconSize: [20, 20],
+        }
+    });
+
+    var tweetMap = L.map("tweetMap", {
+        zoom: 1,
+        center: [0, 0]
+    });
+    var topo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+    });
+    var dark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png',{ attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>' });
+    dark.addTo(tweetMap);
+    var tweets = null, heat = null, countries =null;
+    var layerControl = L.control.layers({
+        "Dark": dark,
+        "Topo": topo,
+    },{},{
+        collapsed:false
+    }).addTo(tweetMap);
+    $.getJSON('../data/tweets_with_text.geojson', function(data) {
+        tweets = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties.OBJECTID <=200;
+            },
+            onEachFeature: onEachFeature,
+        });
+        var features = data["features"];
+        // create array of lat/long arrays
+        var latlng = features.map(function(obj){
+            return [obj.geometry.coordinates[1],obj.geometry.coordinates[0]] ;
+        });
+        // create heat map layer
+        heat = L.heatLayer(latlng, {
+            radius: 35,
+            gradient: {0.0: 'yellow', 0.5: 'yellow', 1: 'red'},
+            minOpacity: 0.1,
+        });
+        heat.addTo(tweetMap);
+        layerControl.addOverlay(heat, "Heatmap");
+        layerControl.addOverlay(tweets, "200 Tweets");
+    });
+</script>
