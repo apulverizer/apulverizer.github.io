@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <img src="lowaltitude/buildings1.JPG"/>
-                    <p>
+                    <p class="caption">
                     (a) the digital surface model, (b) the digital terrain model, (c) the normalized digital surface model, (d) the slope of the normalized digital surface model, (e) the reclassified slope, (f) the final raster showing the buildings in white.
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
@@ -132,13 +132,13 @@
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <img src="lowaltitude/trees1.JPG"/>
-                    <p>
+                    <p class="caption">
                     (a) the digital surface model, (b) the digital terrain model, (c) the normalized digital surface model, (d) the slope of the normalized digital surface model, (e) the reclassified slope, (f) the final raster showing trees after ANDing high slope pixels with high terrain pixels and applying a median filter.     
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <h3>Determining Service Areas</h3>
-                    <p>
-                    Service areas, represent the areas that can be served within a prescribed time or distance threshold. These were determined by ORing the binary raster of building pixels and the binary raster of tree pixels to form a new raster representing obstacles. Current EMS locations were converted from points to raster pixels. The Path-Distance tool in ArcGIS was used to calculate the distance from each EMS pixel to each blank pixel in the obstacle raster. It is important to note that this algorithm only considers “Queens” movements meaning that a path must go through the center of pixels rather than just crossing a section of the pixel. This means that distance calculated does not accurately represent the distance that a drone would fly. It is over-estimated. 
+                    <p class="caption">
+                    Service areas, represent the areas that can be served within a prescribed time or distance threshold. These were determined by ORing the binary raster of building pixels and the binary raster of tree pixels to form a new raster representing obstacles. Current EMS locations were converted from points to raster pixels. The Path-Distance tool in ArcGIS was used to calculate the distance from each EMS pixel to each blank pixel in the obstacle raster. It is important to note that this algorithm only considers “Queens” movements meaning that a path must go through the center of pixels rather than just crossing a section of the pixel. This means that distance calculated does not accurately represent the distance that a drone would fly. It is over-estimated.
                 </div>
             </div>
         </div>
@@ -161,13 +161,13 @@
                     </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <img src="lowaltitude/buildings2.jpg"/>
-                    <p>Identified buildings<p>
+                    <p class="caption">Identified buildings<p>
                     <img src="lowaltitude/trees2.jpg"/>
-                    <p>Identified trees<p>
+                    <p class="caption">Identified trees<p>
                     <img src="lowaltitude/servicearea.jpg"/>
-                    <p>Path cost analysis<p>
+                    <p class="caption">Path cost analysis<p>
                     <img src="lowaltitude/path.jpg"/>
-                    <p>Path planning differences<p>
+                    <p class="caption">Path planning differences<p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     <table class="tableizer-table">
