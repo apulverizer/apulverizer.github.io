@@ -1,0 +1,60 @@
+- layout: left
+  company: ESRI
+  link: esri.com
+  jobs: 
+    - title: Senior Product Engineer
+      dates: Feb 2019 - Present
+    - title: Product Engineer
+      dates: Jan 2017 - Feb 2019
+    - title: Product Engineering Intern
+      dates: May 2016 - July 2016
+    - title: Product Engineering Intern
+      dates: May 2015 - July 2015
+  description: | 
+    I'm the product owner for [Tracker for ArcGIS](doc.arcgis.com/en/tracker/) and work with developers and fellow engineers to design, build, and test iOS, Android, and web apps for the Field Operations team at Esri.
+
+    Additionally I develop automated UI tests using Python, Ruby, Selenium, Appium, and Cucumber/Behave. I'm responsible for developing and maintaining many Python [scripts](https://github.com/Esri/workforce-scripts), [notebooks](https://github.com/Esri/tracker-scripts), and [tools](https://github.com/Esri/collector-tools) for internal and customer use including the [Workforce](https://developers.arcgis.com/python/api-reference/arcgis.apps.workforce.html) and [Tracker](https://developers.arcgis.com/python/api-reference/arcgis.apps.tracker.html) module in the ArcGIS API for Python.
+    
+    I previously worked on the Operations Dashboard team doing design, QA, and automated testing.
+
+- layout: left
+  company: University of Utah
+  link: utah.edu
+  jobs: 
+    - title: Software Developer & GIS Technician
+      dates: Aug 2015 - Dec 2016
+    - title: Teaching Assistant
+      dates: Jan 2015 - Apr 2016
+  description: | 
+    In my first semester at the University of Utah, I taught GEOG 1180 Intro to Geo-Programming (Python) and the two corresponding labs. In the following semesters, I helped students in a web GIS class learn HTML, JavaScript, and the ArcGIS API for JavaScript.
+
+    I later joined the [DIGIT Lab](https://digit.utah.edu/) as a software developer and GIS technician. I developed custom web applications for clients. I also wrote scripts to automate routine GIS and administrative tasks. I performed spatial and non spatial data analysis with ArcGIS Desktop, Python, and R.
+
+- layout: left
+  company: Rochester Institute of Technology
+  link: rit.edu
+  jobs: 
+    - title: Teaching Assistant
+      dates: Sept 2013 - May 2014
+    - title: Food Server
+      dates: Sept 2009 - Mar 2013
+  description: | 
+    I worked for 4 years as a food server at one of the RIT dinning halls. I later got a position in the Computer Engineering department as a grader and teaching assistant for Assembly Language programming and Digital System Design II (VHDL). 
+
+- layout: left
+  company: Lenovo
+  link: lenovo.com
+  jobs: 
+    - title: Product Engineering Co-op
+      dates: Mar 2013 - Aug 2013
+  description: | 
+    I worked primarily with the Thinkpad and ThinkCentre product engineering teams investigating potential hardware and software defects such as drivers, battery life, wireless, and thermal issues.
+
+- layout: left
+  company: The Gleason Works
+  link: gleason.com
+  jobs:
+    - title: Software Engineering Co-op
+      dates: Mar 2012 - Aug 2012
+  description: | 
+    I worked with senior engineers to develop CNC gear cutting and grinding software as well as internal tools using C/C++ and C#/.NET.

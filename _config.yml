@@ -1,0 +1,47 @@
+# Site
+repository: apulverizer/apulverizer.github.io
+favicon: images/favicon.ico
+
+# Personal info
+name: Aaron Pulver
+title: Senior Product Engineer
+email: aaron.t.pulver@gmail.com
+website: https://apulverizer.github.io
+
+# Social links
+github_username:  apulverizer
+linkedin_username: apulverizer
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profile.jpg
+about_content: | # this will include new lines to allow paragraphs
+  Hi, I'm Aaron. I'm a Senior Product Engineer at Esri with a background in software engineering and GIS. I'm most skilled in the ArcGIS platform (Online, Enterprise, APIs), Python development, web development, and automated testing. I also have experience building and testing Android and iOS apps, leading projects, and using many other development related tools like Docker and Git.
+
+# Projects Section
+projects_title: Personal Projects
+
+# Experience Section
+# experience_title: Experience
+
+# Education Section
+# educaton_title: Education
+
+# More Section
+# more_title: A Little More About Me
+more_content: | # this will include new lines to allow paragraphs
+
+  In my free time, I enjoy hiking, mountain biking, kayaking, playing board games and hanging out with my family. In 2014, I thru-hiked the Appalachian Trail, from Maine to Georgia; It was quite the adventure. I've also climbed the 115 4,000+ foot mountians in New England. 
+
+# Footer
+footer_show_references: false
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag

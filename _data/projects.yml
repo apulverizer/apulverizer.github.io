@@ -1,0 +1,13 @@
+- layout: left
+  name: Allagash
+  link: apulverizer.github.io/allagash
+  github: apulverizer/allagash
+  description: |
+    I started the first iteration of this project ([pyspatialopt](https://github.com/apulverizer/pyspatialopt)) while in grad school and working on my thesis. I ended up re-writing it to natively use [geopandas](https://geopandas.org/) geodataframes. It's a library to create and solve spatial covering problems using GIS data.
+
+- layout: left
+  name: Klask Score Tracker
+  github: apulverizer/klask-app
+  link: https://portland-leaderboard.web.app/
+  description: |
+    At our office we have the board game Klask. Some colleagues and I collaborated to build a progressive web app using [Ember](https://emberjs.com/) to keep track of games and scores. The app features a leaderboard, a way to add new game results, user profiles and supports Google authentication.
