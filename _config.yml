@@ -1,6 +1,7 @@
 # Site
 repository: apulverizer/apulverizer.github.io
 favicon: images/favicon.ico
+darkmode: true
 
 # Personal info
 name: Aaron Pulver
