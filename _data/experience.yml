@@ -2,8 +2,10 @@
   company: ESRI
   link: esri.com
   jobs: 
+    - title: Principal Product Engineer
+      dates: Feb 2022 - Present
     - title: Senior Product Engineer
-      dates: Feb 2019 - Present
+      dates: Feb 2019 - Feb 2022
     - title: Product Engineer
       dates: Jan 2017 - Feb 2019
     - title: Product Engineering Intern
@@ -11,11 +13,17 @@
     - title: Product Engineering Intern
       dates: May 2015 - July 2015
   description: | 
-    I'm the product owner for [Tracker for ArcGIS](doc.arcgis.com/en/tracker/) and work with developers and fellow engineers to design, build, and test iOS, Android, and web apps for the Field Operations team at Esri.
+    - Product owner for [ArcGIS Tracker](doc.arcgis.com/en/tracker/) and one of the technical leads for the [Field Maps](https://www.esri.com/en-us/arcgis/products/arcgis-field-maps/overview) app.
 
-    Additionally I develop automated UI tests using Python, Ruby, Selenium, Appium, and Cucumber/Behave. I'm responsible for developing and maintaining many Python [scripts](https://github.com/Esri/workforce-scripts), [notebooks](https://github.com/Esri/tracker-scripts), and [tools](https://github.com/Esri/collector-tools) for internal and customer use including the [Workforce](https://developers.arcgis.com/python/api-reference/arcgis.apps.workforce.html) and [Tracker](https://developers.arcgis.com/python/api-reference/arcgis.apps.tracker.html) module in the ArcGIS API for Python.
+    - Product security lead for our web applications. I routinely review and configure automated scans to ensure we are meeting Esri's software security policies. 
+
+    - Develop features and fix bugs for our web apps which are built with TypeScript, Ember.js, and Esri's Calcite design framework.
+
+    - Develop and maintain many Python [scripts](https://github.com/Esri/workforce-scripts), [notebooks](https://github.com/Esri/tracker-scripts), and [tools](https://github.com/Esri/collector-tools) for internal and customer use including the [Workforce](https://developers.arcgis.com/python/api-reference/arcgis.apps.workforce.html) and [Tracker](https://developers.arcgis.com/python/api-reference/arcgis.apps.tracker.html) module in the ArcGIS API for Python.
+
+    - Developed a test automation framework using Python, Selenium, Appium, Behave, PyTest, Docker, and Jenkins for our web and mobile applications.
     
-    I previously worked on the Operations Dashboard team doing design, QA, and automated testing.
+    - Perform manual QA testing on web, mobile, and REST APIs.
 
 - layout: left
   company: University of Utah
@@ -26,9 +34,13 @@
     - title: Teaching Assistant
       dates: Jan 2015 - Apr 2016
   description: | 
-    In my first semester at the University of Utah, I taught GEOG 1180 Intro to Geo-Programming (Python) and the two corresponding labs. In the following semesters, I helped students in a web GIS class learn HTML, JavaScript, and the ArcGIS API for JavaScript.
+    - Taught Intro to Geo-Programming (Python) and the two corresponding labs.
 
-    I later joined the [DIGIT Lab](https://digit.utah.edu/) as a software developer and GIS technician. I developed custom web applications for clients. I also wrote scripts to automate routine GIS and administrative tasks. I performed spatial and non spatial data analysis with ArcGIS Desktop, Python, and R.
+    - Taught Intro to WebGIS labs using HTML, JavaScript, and the ArcGIS API for JavaScript.
+
+    - Developed custom web applications and scripts for clients of the [DIGIT Lab](https://digit.utah.edu/) using Python, JavaScript, HTML, and ArcGIS Server.
+
+    - Performed spatial and non spatial data analysis with ArcGIS Desktop, Python, and R.
 
 - layout: left
   company: Rochester Institute of Technology
@@ -39,7 +51,9 @@
     - title: Food Server
       dates: Sept 2009 - Mar 2013
   description: | 
-    I worked for 4 years as a food server at one of the RIT dinning halls. I later got a position in the Computer Engineering department as a grader and teaching assistant for Assembly Language programming and Digital System Design II (VHDL). 
+    - Taught Assembly Language programming and Digital System Design II (VHDL) labs.
+
+    - Worked as a food server at one of the RIT dinning halls
 
 - layout: left
   company: Lenovo
@@ -48,7 +62,7 @@
     - title: Product Engineering Co-op
       dates: Mar 2013 - Aug 2013
   description: | 
-    I worked primarily with the Thinkpad and ThinkCentre product engineering teams investigating potential hardware and software defects such as drivers, battery life, wireless, and thermal issues.
+    - Worked with the Thinkpad and ThinkCentre product engineering teams investigating potential hardware and software defects such as drivers, battery life, wireless, and thermal issues.
 
 - layout: left
   company: The Gleason Works
@@ -57,4 +71,4 @@
     - title: Software Engineering Co-op
       dates: Mar 2012 - Aug 2012
   description: | 
-    I worked with senior engineers to develop CNC gear cutting and grinding software as well as internal tools using C/C++ and C#/.NET.
+    - Wworked with senior engineers to develop CNC gear cutting and grinding software as well as internal tools using C/C++ and C#/.NET.
