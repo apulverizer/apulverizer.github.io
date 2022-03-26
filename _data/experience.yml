@@ -1,6 +1,5 @@
 - layout: left
-  company: ESRI
-  link: esri.com
+  company: Esri
   jobs: 
     - title: Principal Product Engineer
       dates: Feb 2022 - Present
@@ -27,9 +26,8 @@
 
 - layout: left
   company: University of Utah
-  link: utah.edu
   jobs: 
-    - title: Software Developer & GIS Technician
+    - title: GIS Developer
       dates: Aug 2015 - Dec 2016
     - title: Teaching Assistant
       dates: Jan 2015 - Apr 2016
@@ -44,7 +42,6 @@
 
 - layout: left
   company: Rochester Institute of Technology
-  link: rit.edu
   jobs: 
     - title: Teaching Assistant
       dates: Sept 2013 - May 2014
@@ -53,11 +50,10 @@
   description: | 
     - Taught Assembly Language programming and Digital System Design II (VHDL) labs.
 
-    - Worked as a food server at one of the RIT dinning halls
+    - Worked as a food server at one of the RIT dinning halls.
 
 - layout: left
   company: Lenovo
-  link: lenovo.com
   jobs: 
     - title: Product Engineering Co-op
       dates: Mar 2013 - Aug 2013
@@ -66,9 +62,8 @@
 
 - layout: left
   company: The Gleason Works
-  link: gleason.com
   jobs:
     - title: Software Engineering Co-op
       dates: Mar 2012 - Aug 2012
   description: | 
-    - Wworked with senior engineers to develop CNC gear cutting and grinding software as well as internal tools using C/C++ and C#/.NET.
+    - Worked with senior engineers to develop CNC gear cutting and grinding software as well as internal tools using C/C++ and C#/.NET.

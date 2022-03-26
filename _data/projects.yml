@@ -3,4 +3,4 @@
   link: apulverizer.github.io/allagash
   github: apulverizer/allagash
   description: |
-    A Python library to solve spatial optimization problems using [GeoPandas](https://geopandas.org/en/stable/) or the [ArcGIS API for Python](https://developers.arcgis.com/python/) in conjunction with [pulp](https://github.com/coin-or/pulp).
+    - A Python library to solve spatial optimization problems using [GeoPandas](https://geopandas.org/en/stable/) or the [ArcGIS API for Python](https://developers.arcgis.com/python/) in conjunction with [pulp](https://github.com/coin-or/pulp).
