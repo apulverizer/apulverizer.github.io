@@ -1,13 +1,18 @@
 # Site
 repository: apulverizer/apulverizer.github.io
 favicon: images/favicon.ico
-darkmode: true
+
+# Content configuration version
+version: 2
 
 # Personal info
 name: Aaron Pulver
 title: Principal Product Engineer
 email: aaron.t.pulver@gmail.com
 website: https://apulverizer.github.io
+
+# Dark Mode (true/false/never)
+darkmode: true
 
 # Social links
 github_username:  apulverizer
@@ -17,24 +22,127 @@ linkedin_username: apulverizer
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, I'm Aaron. I'm a Principal Product Engineer at Esri with a background in software engineering and GIS. I'm most skilled in the ArcGIS platform (Online, Enterprise, APIs), Python development, web development, and automated testing.
+  Hi, I'm Aaron. I'm a Principal Product Engineer on the Field Operations team at Esri. My background is in software development and GIS. In my free time, I enjoy hiking, mountain biking, kayaking, playing board games and hanging out with my family. In 2014, I thru-hiked the Appalachian Trail, from Maine to Georgia. I’ve also climbed the 115 4,000+ foot mountains in New England. 
 
-  I enjoy hiking, mountain biking, kayaking, playing board games and hanging out with my family. In 2014, I thru-hiked the Appalachian Trail, from Maine to Georgia. I’ve also climbed the 115 4,000+ foot mountians in New England.
+  
+content:
+  - title: Skills # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        description: |
+          - Geospatial Technology: 
+            - ArcGIS (Online, Enterprise, Python API, REST APIs, Desktop, Mobile), GeoPandas, Shapely, PostGIS
+          - Programming Languages: 
+            - Python, TypeScript/JavaScript, HTML, CSS, SQL
+          - Testing Frameworks: 
+            - PyTest, Behave/Cucumber, Selenium, Appium, Locust, Jest
+          - Other Technology: 
+            - Git, Docker, Nginx, GitHub Actions, Jenkins, Jupyter Notebooks
 
-# Projects Section
-projects_title: Personal Projects
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        title: Esri
+        sub_title: Principal Product Engineer
+        caption: Feb 2022 - Present
+        description: |
+            - Act as a team lead for [ArcGIS Field Maps](https://www.esri.com/en-us/arcgis/products/arcgis-field-maps/overview) with a focus on location sharing, geofencing, workflow automation, and data collection.
+            - Lead a product development team of 10 people who build web, iOS, and Android solutions.
+            - Act as product security lead for Field Maps, Workforce, and Track Viewer web applications.
+      - layout: left
+        sub_title: Senior Product Engineer
+        caption: Feb 2019 - Feb 2022
+        description: |
+            - Acted as product owner for [ArcGIS Tracker](doc.arcgis.com/en/tracker/).
+            - Developed features and fix bugs for the Field Maps, Workforce, and Track Viewer web apps using Typescript, Ember.js, Tailwind, and the Calcite design framework.
+            - Created the [Integromat (now Make) ArcGIS Field Maps app](https://www.make.com/en/integrations/arcgis-field-maps)
+      - layout: left
+        sub_title: Product Engineer
+        caption: Jan 2017 - Feb 2019
+        description: |
+            - Performed manual QA for the ArcGIS Dashboards and ArcGIS Tracker products.
+            - Developed a test automation framework using Python, Selenium, Appium, Behave, PyTest, Docker, and Jenkins for web, iOS, and Android applications.
+      - layout: left
+        sub_title: Product Engineer Intern
+        caption: May 2016 - July 2016<br>May 2015 - July 2015
+        description: |
+            - Developed internal tools to improve manual testing efficency using Python.
+            - Created example [scripts](https://github.com/Esri/workforce-scripts) and [tools](https://github.com/Esri/collector-tools) for customers.
+            - Created UI tests with Cucumber, Ruby, and Appium.
 
-# Experience Section
-# experience_title: Experience
+      - layout: left
+        title: University of Utah
+        sub_title: GIS Developer & Teaching Assistant
+        caption: Jan 2015 - Dec 2016
+        description: |
+          - Taught Intro to Geo-Programming (Python) and the two corresponding labs.
+          - Taught Intro to WebGIS labs using HTML, JavaScript, and the ArcGIS API for JavaScript.
+          - Developed custom web applications and scripts for clients of the [DIGIT Lab](https://digit.utah.edu/) using Python, JavaScript, HTML, and ArcGIS Server.
+          - Performed spatial and non spatial data analysis with ArcGIS Desktop, Python, and R.
 
-# Education Section
-# educaton_title: Education
+      - layout: left
+        title: Rochester Institute of Technology
+        sub_title: Teaching Assistant
+        caption: Sept 2013 - May 2014
+        description: |
+          - Taught Assembly Language programming and Digital System Design II (VHDL) labs.
 
-# More Section
-# more_title: A Little More About Me
+      - layout: left
+        title: Lenovo
+        sub_title: Product Engineering Co-op
+        caption: Mar 2013 - Aug 2013
+        description: |
+          - Investigated potential hardware and software defects such as drivers, battery life, wireless, and thermal issues.
+
+      - layout: left
+        title: Gleason Works
+        sub_title: Software Engineering Co-op
+        caption: Mar 2012 - Aug 2012
+        description: |
+          - Developed CNC gear cutting and grinding software as well as internal tools using C/C++ and C#/.NET.
+
+  - title: Education # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: University of Utah
+        caption: 2015 - 2016
+        sub_title: MS Geography
+        description: |
+          - Researched how drones could be used to deliver emergency medical supplies such as AEDs to patients. 
+            - [Locating automated external defibrillator enabled medical drones to reduce response times to out-of-hospital cardiac arrests](https://collections.lib.utah.edu/details?id=1345123&fd=title_t%2Cauthor_t%2Cdescription_t%2Cdepartment_t&rows=200&sort=modified_tdt+asc&facet_department_t=%22Geography%22&facet_school_or_college_t=%22College+of+Social+%26+Behavioral+Science%22&facet_setname_s=ir_etd) 
+          - Published a few journal articles:
+            - [Locating AED Enabled Medical Drones to Enhance Cardiac Arrest Response Times](https://www.tandfonline.com/doi/abs/10.3109/10903127.2015.1115932)
+            - [Optimizing the spatial location of medical drones](https://www.sciencedirect.com/science/article/abs/pii/S0143622816301898)
+            - [A review of security and privacy concerns in digital intelligence collection](https://www.tandfonline.com/doi/abs/10.1080/02684527.2017.1342929)
+
+      - layout: left
+        title: Rochester Institute of Technology
+        caption: 2009 - 2014
+        sub_title: BSc Computer Engineering
+        description: | 
+          - Studied Computer Engineering with a minor in Electrical Engineering
+          - Completed a wide range of projects including:
+            - an autonomous shopping chart
+            - a simple Android app
+            - a program to control audio volume using EEG signals 
+
+  - title: Personal Projects # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        title: Allagash
+        link:  apulverizer.github.io/allagash
+        # link_text: Project Website
+        description: |
+          - A Python library to solve spatial optimization problems using [GeoPandas](https://geopandas.org/en/stable/) or the [ArcGIS API for Python](https://developers.arcgis.com/python/) in conjunction with [pulp](https://github.com/coin-or/pulp).
+
 
 # Footer
 footer_show_references: false
+# references_title: References on request (Override references text)
 
 # Build settings
 remote_theme: sproogen/resume-theme
