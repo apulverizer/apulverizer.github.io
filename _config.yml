@@ -49,7 +49,7 @@ content:
         caption: Feb 2022 - Present
         description: |
             - Act as a team lead for [ArcGIS Field Maps](https://www.esri.com/en-us/arcgis/products/arcgis-field-maps/overview) with a focus on location sharing, geofencing, workflow automation, and data collection.
-            - Lead a product development team of 10 people who build web, iOS, and Android solutions.
+            - Lead a product development team that builds web, iOS, and Android solutions.
             - Act as product security lead for Field Maps, Workforce, and Track Viewer web applications.
       - layout: left
         sub_title: Senior Product Engineer
@@ -68,7 +68,7 @@ content:
         sub_title: Product Engineer Intern
         caption: May 2016 - July 2016<br>May 2015 - July 2015
         description: |
-            - Developed internal tools to improve manual testing efficency using Python.
+            - Developed internal tools to improve manual testing efficiency using Python.
             - Created example [scripts](https://github.com/Esri/workforce-scripts) and [tools](https://github.com/Esri/collector-tools) for customers.
             - Created UI tests with Cucumber, Ruby, and Appium.
 
