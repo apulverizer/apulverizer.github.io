@@ -48,37 +48,38 @@ content:
         sub_title: Senior Software Engineer
         caption: August 2022 - Present
         description: |
-            - Develop REST APIs using Python, Flask, and OpenShift Container Platform (Kubernetes)
-            - Create internal ETL Python and Shell scripts to add geographic context to business datasets
-            - Manage and monitor ArcGIS Enterprise and ArcGIS Server deployments
+            - Platform Leadership & Mentorship: Lead the enterprise geospatial platform team, following organization-wide standards for high-scale system design, availability, observability, and data pipeline compliance. Mentor senior and mid-level engineers, instituting formal design and code reviews to elevate engineering practices. Work closely with business leaders to plan and prioritize features and modernization efforts.
+            - High-Scale Spatial APIs: Engineered major scalability and performance improvements for geospatial REST APIs deployed on OpenShift (Kubernetes) and backed by Oracle and ArcGIS Server. Optimized the system to reliably process millions of real-time data and geocoding requests daily with sub-second response times.
+            - Enterprise Data Pipeline: Manage and maintain around 20 spatial data pipelines built with Oracle, Control-M, Python, and ArcGIS. Designed and currently building the next-generation migration to scalable containerized workflows and a Medallion architecture for data storage and processing with Snowflake.
+            - Resilient Infrastructure Strategy: Designed and maintained a highly resilient, hot disaster recovery (DR) environment for ArcGIS enterprise infrastructure, ensuring uninterrupted availability and delivery of core property, bank, and situational awareness products for multi-user internal platforms.
       - layout: left
         title: Esri
         sub_title: Principal Product Engineer
         caption: Feb 2022 - July 2022
         description: |
-            - Acted as a team lead for [ArcGIS Field Maps](https://www.esri.com/en-us/arcgis/products/arcgis-field-maps/overview) with a focus on location sharing, geofencing, workflow automation, and data collection.
-            - Led a product development team that builds web, iOS, and Android solutions.
-            - Acted as product security lead for Field Maps, Workforce, and Track Viewer web applications.
+            - Architecture & Product Leadership: Served as a technical team lead for ArcGIS Field Maps, guiding cross-functional web, iOS, and Android engineering teams. Architected core system design for location sharing, geofencing, workflow automation, and high-volume mobile data collection.
+            - Unified Data Collection Design: Designed and developed the core architecture and technical specification for ArcGIS "smart forms," establishing a standardized data collection framework widely adopted across independent product lines, including the JavaScript SDK, Map Viewer, and Field Maps.
+            - Mobile Geofencing Capabilities: Led engineering efforts to bring low-latency, on-device geofencing and real-time proximity alerting frameworks to native iOS and Android applications.
+            - Application Security Lead: Directed threat modeling and product security assessments for Field Maps, Workforce, and Track Viewer. Investigated and resolved vulnerabilities, ensuring enterprise-grade data security and compliance for global customers managing tracking data.
       - layout: left
         sub_title: Senior Product Engineer
         caption: Feb 2019 - Feb 2022
         description: |
-            - Acted as product owner for [ArcGIS Tracker](doc.arcgis.com/en/tracker/).
-            - Developed features and fix bugs for the Field Maps, Workforce, and Track Viewer web apps using Typescript, Ember.js, Tailwind, and the Calcite design framework.
-            - Created the [Integromat (now Make) ArcGIS Field Maps app](https://www.make.com/en/integrations/arcgis-field-maps)
+            - Technical Feature Ownership: Served as technical owner for the ArcGIS Tracker mobile app, translating complex customer requirements into scalable software specifications and location-tracking system designs
+            - Core Location Sharing Design: Designed the architecture for the location sharing capability deployed globally across ArcGIS Online and ArcGIS Enterprise cloud infrastructure.
+            - SDK & Integration Development: Authored the Workforce and Tracker modules of the ArcGIS API for Python, delivering programmatic interfaces for workflow automation and external system integrations. Developed ArcGIS Field Maps application on the Make platform to allow customers to leverage webhooks to automate workflows.
       - layout: left
         sub_title: Product Engineer
         caption: Jan 2017 - Feb 2019
         description: |
-            - Performed manual QA for the ArcGIS Dashboards and ArcGIS Tracker products.
-            - Developed a test automation framework using Python, Selenium, Appium, Behave, PyTest, Docker, and Jenkins for web, iOS, and Android applications.
+            - Workflow Automation: Developed a suite of open-source Python scripts, developer utilities, and notebooks automating core administrative workflows and data transformations for mobile applications.
+            - Test Automation Architecture: Designed and implemented an end-to-end test automation framework using Python, Selenium, Appium, Behave, PyTest, Docker, and Jenkins to validate web and native mobile applications.
       - layout: left
         sub_title: Product Engineer Intern
         caption: May 2016 - July 2016<br>May 2015 - July 2015
         description: |
-            - Developed internal tools to improve manual testing efficiency using Python.
-            - Created example [scripts](https://github.com/Esri/workforce-scripts) and [tools](https://github.com/Esri/collector-tools) for customers.
-            - Created UI tests with Cucumber, Ruby, and Appium.
+            - Application Development: Developed custom spatial web applications and automation scripts utilizing Python, JavaScript, and ArcGIS Server
+            - Spatial Modeling & Analysis: Performed advanced spatial optimization and structural data modeling using ArcGIS Desktop, Python, and R to support peer-reviewed research on resource deployment and spatial efficiency.
 
       - layout: left
         title: University of Utah
