@@ -31,14 +31,12 @@ content:
     content:
       - layout: top-middle
         description: |
-          - Geospatial Technology: 
-            - ArcGIS (Online, Enterprise, Python API, REST APIs, Desktop, Mobile), GeoPandas, Shapely, PostGIS
-          - Programming Languages & Frameworks: 
-            - Python, TypeScript/JavaScript, Ember, Flask, HTML, CSS, SQL
-          - Testing Frameworks: 
-            - PyTest, Behave/Cucumber, Selenium, Appium, Locust, Jest
-          - Other Technology: 
-            - Git, Docker, Nginx, GitHub Actions, Jenkins, Jupyter Notebooks
+          - Geospatial: 
+            - ArcGIS Enterprise, GDAL, Oracle (Spatial), PostGIS, GeoPandas, Shapely
+          - Systems & Languages: 
+            - Python, TypeScript, SQL, Bash
+          - Infrastructure 
+            - OpenShift (Kubernetes), Docker, AWS (EC2, Lambda, API Gateway), GitLab CI/CD, Linux
 
   - title: Experience
     layout: list
